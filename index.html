@@ -311,9 +311,10 @@
 <script>
     let seats = document.querySelectorAll('.seat input[type="checkbox"]');
     let chosenSeat = document.getElementById('chosenSeat');
+    let btnConfirm = document.getElementById('btnConfirm');
 
     Array.from(seats).forEach(seat => {
-        seat.addEventListener('change', function(e) {
+        seat.addEventListener('change', (e) => {
             if (e.target.checked) {
                 chosenSeat.innerText = e.target.id;
             }
@@ -324,6 +325,10 @@
                 }
             });
         });
+    });
+
+    btnConfirm.addEventListener('click', (e) => {
+        alert('confirm');
     });
 </script>
 </html>

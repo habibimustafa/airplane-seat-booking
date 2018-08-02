@@ -300,14 +300,17 @@
                 </ol>
             </li>
         </ol>
+        <div class="confirm fuselage">
+            <p><button id="btnConfirm">Confirm</button></p>
+        </div>
         <div class="exit exit--back fuselage">
 
         </div>
     </div>
 </body>
 <script>
-    var seats = document.querySelectorAll('.seat input[type="checkbox"]');
-    var chosenSeat = document.getElementById('chosenSeat');
+    let seats = document.querySelectorAll('.seat input[type="checkbox"]');
+    let chosenSeat = document.getElementById('chosenSeat');
 
     Array.from(seats).forEach(seat => {
         seat.addEventListener('change', function(e) {

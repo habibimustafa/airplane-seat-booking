@@ -109,6 +109,7 @@ ol {
     animation-name: rubberBand;
     animation-duration: 300ms;
     animation-fill-mode: both;
+    color: #F42536;
 }
 .seat input[type=checkbox]:disabled + label {
     background: #dddddd;
@@ -122,6 +123,7 @@ ol {
     top: 4px;
     left: 50%;
     transform: translate(-50%, 0%);
+    color: #F42536;
 }
 .seat input[type=checkbox]:disabled + label:hover {
     box-shadow: none;
@@ -140,6 +142,7 @@ ol {
     border-radius: 5px;
     animation-duration: 300ms;
     animation-fill-mode: both;
+    color: white;
 }
 .seat label:before {
     content: "";

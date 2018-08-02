@@ -30,9 +30,18 @@ html {
     border-right: 5px solid #d8d8d8;
     border-left: 5px solid #d8d8d8;
 }
+
 .cockpit h1 {
     width: 60%;
-    margin: 30px auto 35px auto;
+    margin: 35px auto 0px auto;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: navy;
+}
+
+.cockpit h2 {
+    margin: 5px auto;
+    font-size: 16px;
 }
 
 .exit {

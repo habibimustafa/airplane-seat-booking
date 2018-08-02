@@ -29,6 +29,7 @@ html {
     border-radius: 50%;
     border-right: 5px solid #d8d8d8;
     border-left: 5px solid #d8d8d8;
+    background-color: gainsboro;
 }
 
 .cockpit h1 {
@@ -37,11 +38,13 @@ html {
     text-transform: uppercase;
     font-size: 22px;
     color: navy;
+    position: inherit;
 }
 
 .cockpit h2 {
     margin: 5px auto;
     font-size: 16px;
+    position: inherit;
 }
 
 .exit {
@@ -71,6 +74,7 @@ html {
 .fuselage {
     border-right: 5px solid #d8d8d8;
     border-left: 5px solid #d8d8d8;
+    background-color: gainsboro;
 }
 
 ol {

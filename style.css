@@ -77,6 +77,23 @@ html {
     background-color: gainsboro;
 }
 
+.info p {
+    margin: 0;
+    padding: 0 5px 15px;
+    font-weight: bold;
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.info p#passenger {
+    float: left;
+    text-align: left;
+}
+
+.info p#chosenSeat {
+    text-align: right;
+}
+
+
 ol {
     list-style: none;
     padding: 0;

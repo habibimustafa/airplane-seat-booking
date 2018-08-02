@@ -14,6 +14,10 @@
         <div class="exit exit--front fuselage">
 
         </div>
+        <div class="info fuselage">
+            <p id="passenger">Passenger</p>
+            <p id="chosenSeat">Seat</p>
+        </div>
         <ol class="cabin fuselage">
             <li class="row row--1">
                 <ol class="seats" type="A">
@@ -303,21 +307,19 @@
 </body>
 <script>
     var seats = document.querySelectorAll('.seat input[type="checkbox"]');
-    var chosenSeat = null;
+    var chosenSeat = document.getElementById('chosenSeat');
 
     Array.from(seats).forEach(seat => {
         seat.addEventListener('change', function(e) {
             if (e.target.checked) {
-                chosenSeat = e.target.id;
+                chosenSeat.innerText = e.target.id;
             }
 
             seats.forEach((s) => {
-                if (s.id !== chosenSeat && !s.disabled) {
+                if (s.id !== e.target.id && !s.disabled) {
                     s.checked = false;
                 }
             });
-
-            console.log(chosenSeat);
         });
     });
 </script>

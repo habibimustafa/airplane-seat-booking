@@ -9,7 +9,7 @@
     <div class="plane">
         <div class="cockpit">
             <h1>Dicoding Air</h1>
-            <h2>Please select your seats</h2>
+            <h2>Please select a seat</h2>
         </div>
         <div class="exit exit--front fuselage">
 
@@ -303,15 +303,21 @@
 </body>
 <script>
     var seats = document.querySelectorAll('.seat input[type="checkbox"]');
-    var chosenSeats = [];
+    var chosenSeat = null;
 
     Array.from(seats).forEach(seat => {
-        seat.addEventListener('change', function() {
-            chosenSeats  = [].map
-                .call(seats, (s) => s.checked ? s.id : null)
-                .filter((s) => s != null);
+        seat.addEventListener('change', function(e) {
+            if (e.target.checked) {
+                chosenSeat = e.target.id;
+            }
 
-            console.log(chosenSeats);
+            seats.forEach((s) => {
+                if (s.id !== chosenSeat && !s.disabled) {
+                    s.checked = false;
+                }
+            });
+
+            console.log(chosenSeat);
         });
     });
 </script>
